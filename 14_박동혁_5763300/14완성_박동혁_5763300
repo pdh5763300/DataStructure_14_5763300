@@ -11,19 +11,19 @@ int main() {
     char input[256];
 
     
-    printf("Ã¹ ¹øÂ° ´ÙÇ×½ÄÀ» ÀÔ·ÂÇÏ¼¼¿ä (¿¹: 3x^2+4x+1):\n");
+    printf("ì²« ë²ˆì§¸ ë‹¤í•­ì‹ì„ ì…ë ¥í•˜ì„¸ìš” (ì˜ˆ: 3x^2+4x+1):\n");
     fgets(input, sizeof(input), stdin);
     input[strcspn(input, "\n")] = '\0'; 
     parsePolynomial(input, &poly1);
 
     
-    printf("\nµÎ ¹øÂ° ´ÙÇ×½ÄÀ» ÀÔ·ÂÇÏ¼¼¿ä (¿¹: 2x^2+5x+3):\n");
+    printf("\në‘ ë²ˆì§¸ ë‹¤í•­ì‹ì„ ì…ë ¥í•˜ì„¸ìš” (ì˜ˆ: 2x^2+5x+3):\n");
     fgets(input, sizeof(input), stdin); 
     input[strcspn(input, "\n")] = '\0';
     parsePolynomial(input, &poly2);
 
    
-    printf("\n[°ö¼À °á°ú]\n");
+    printf("\n[ê³±ì…ˆ ê²°ê³¼]\n");
     result = multiply(poly1, poly2);
     printDebugOnly(result, move);
 
